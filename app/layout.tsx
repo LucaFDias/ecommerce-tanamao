@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import Header from '@/app/components/Header/Header';
+import Footer from '@/app/components/Footer/Footer';
 
 
 const nunito = Nunito({ subsets: ['latin'] })
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={nunito.className}>
         <Header/>
         {children}
+        <Footer/>
         </body>
     </html>
   )

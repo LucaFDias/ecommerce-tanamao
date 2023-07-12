@@ -34,7 +34,7 @@ const Header = () => {
             <ListNav />
 
             <div className="flex items-center gap-x-5">
-              <span className="cart_icons">
+              <span className="avatar_icons">
                 <Image
                   className="w-8 h-8 cursor-pointer"
                   src={AvatarUser}
@@ -43,12 +43,12 @@ const Header = () => {
               </span>
               <span className="fav_icons">
                 <Badge badgeContent={4} color="primary">
-                  <AiOutlineHeart size={24} className="cursor-pointer" />
+                  <AiOutlineHeart size={32} className="cursor-pointer" />
                 </Badge>
               </span>
               <span className="cart_icons">
                 <Badge badgeContent={4} color="primary">
-                  <AiOutlineShoppingCart size={24} className="cursor-pointer"/>
+                  <AiOutlineShoppingCart size={32} className="cursor-pointer"/>
                 </Badge>
               </span>
             </div>
