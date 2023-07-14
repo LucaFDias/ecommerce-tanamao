@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/assets/images/logo.png";
@@ -14,13 +13,17 @@ import {
 
 import { Badge } from "@mui/material";
 import { Container, Row } from "reactstrap";
+import Headroom from 'react-headroom';
 
 import ListNav from "./ListNav";
 
 const Header = () => {
 
   return (
-    <header className="w-full h-[70px] leading-[70px]">
+    <Headroom
+      className="w-full h-[70px] leading-[70px]"
+      style={{ background: "#fff", boxShadow: '3px 3px 8px -3px #ddd'}}
+    >
       <Container>
         <Row>
           <div className="flex items-center justify-between">
@@ -48,7 +51,7 @@ const Header = () => {
               </span>
               <span className="cart_icons">
                 <Badge badgeContent={4} color="primary">
-                  <AiOutlineShoppingCart size={32} className="cursor-pointer"/>
+                  <AiOutlineShoppingCart size={32} className="cursor-pointer" />
                 </Badge>
               </span>
             </div>
@@ -62,8 +65,8 @@ const Header = () => {
           </div>
         </Row>
       </Container>
-    </header>
-  );
+    </Headroom>
+  )
 };
 
 export default Header

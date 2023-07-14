@@ -3,6 +3,7 @@ import {
   Container, 
   Row 
 } from "reactstrap";
+import { motion } from "framer-motion";
 
 import { LuPlane } from 'react-icons/lu';
 import { FiRefreshCw } from "react-icons/fi";
@@ -10,7 +11,6 @@ import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 
 const Services = () => {
-
   const serviceData = [
     {
       icon: <LuPlane size={32} />,
@@ -45,8 +45,8 @@ const Services = () => {
           {
             serviceData.map((item, index) => (
               <Col lg="3" md="4" key={index}>
-                <div 
-                  className="py-3 px-4 bg-fuchsia-200 flex items-center gap-x-3 rounded-md"
+                <motion.div whileHover={{ scale: 1.1}}
+                  className="py-3 px-4 bg-fuchsia-200 flex items-center gap-x-3 rounded-md cursor-pointer"
                   style={{background: `${item.bg}`}}
                 >
                   <span className="bg-black text-white rounded-full p-2">
@@ -56,7 +56,7 @@ const Services = () => {
                     <h3 className="text-xl font-semibold">{item.title}</h3>
                     <p className="text-sm mt-1 text-[#222]">{item.subtitle}</p>
                   </div>
-                </div>
+                </motion.div>
               </Col>
             ))
           }

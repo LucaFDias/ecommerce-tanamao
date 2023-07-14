@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const ListNav = () => {
 
-  const pathname = usePathname()
+  const pathname = usePathname();
   const routes = [
     {
       href: "/departaments",
@@ -38,6 +38,7 @@ const ListNav = () => {
       active: pathname === `/games`,
     },
   ]
+  
   return (
     <nav className="navigation">
       <ul className="flex items-center gap-x-11">
