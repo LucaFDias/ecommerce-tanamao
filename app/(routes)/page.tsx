@@ -1,110 +1,143 @@
 "use client";
 
+import '@/app/styles/home.css'
+
 import Link from "next/link";
 import Image from "next/image";
-import HeroImg from '@/app/assets/images/imagesProducts/hero-img.png';
-import CounterImg from '@/app/assets/images/imagesProducts/counter-timer-img.png'
+import { motion } from 'framer-motion';
+
+import CounterImg from '@/app/assets/images/imagesProducts/counter-timer-img.png';
 
 import { 
   Col,
   Row,
-  Container, 
+  Container,
 } from "reactstrap";
 import { Button } from "@/components/ui/button";
-import Services from "@/app/components/services/Services";
+import Slider from '@/app/components/ui/Slider/Slider';
 
-import products from "@/app/data/product";
-import { useState, useEffect } from "react";
 import Clock from "@/app/components/ui/Clock";
-import ProductsList from "@/app/components/ui/ProductsList";
+import Brands from "@/app/components/Brands/Brands";
+import ListProduct from "@/app/components/ui/Product/ListProduct"
+import ListCategory from "@/app/components/Categories/ListCategory"
+
+import { BsArrowRight } from "react-icons/bs"
 
 const Home = () => {
-  const [ bestSales, setBestSales ] = useState(products);
-  const [ mobileProducts, setMobileProducts ] = useState(products);
-  const [ popularProducts, setPopularProducts ] = useState(products);
-  const [ wirelessProducts, setWirelessProducts ] = useState(products);
-  const [ trendingProducts, setTrendingProducts ] = useState(products);
-
-  useEffect(() => {
-    const filteredTrendingProducts = products.filter(
-      (item) => item.category === "chair"
-    );
-    const filteredBestSales = products.filter(
-      (item) => item.category === "sofa"
-    );
-    const filteredMobilesProducts = products.filter(
-      (item) => item.category === "mobile"
-    );
-    const filteredWirelessProducts = products.filter(
-      (item) => item.category === "wireless"
-    );
-    const filteredPopularProducts = products.filter(
-      (item) => item.category === "watch"
-    );
-
-    setBestSales(filteredBestSales);
-    setMobileProducts(filteredMobilesProducts);
-    setPopularProducts(filteredPopularProducts);
-    setWirelessProducts(filteredWirelessProducts);
-    setTrendingProducts(filteredTrendingProducts);
-  }, []);
 
   return (
     <>
-      <section className="bg-sky-200">
+      <section>
         <Container>
           <Row>
-            <Col lg="6" md="6">
-              <div className="pt-11">
-                <p className="hero_subtitle">
-                  Produtos seminovos com garantia de 1 ano
-                </p>
-                <h2 className="text-5xl font-medium my-4">
-                  Torne o seu interior mais minimalista & moderno
-                </h2>
-                <p className="text-[#111] leading-7">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae iusto delectus non, asperiores necessitatibus porro
-                  dignissimos vitae voluptate officia iure!
-                </p>
-
-                <Button className="mt-10">
-                  <Link className="text-white no-underline" href="/products">
-                    SHOP NOW
-                  </Link>
-                </Button>
-              </div>
-            </Col>
-
-            <Col lg="6" md="6">
-              <div className="hero_img">
-                <Image src={HeroImg} alt="Banner 1" />
-              </div>
+            <Col lg="12" md="12">
+              <Slider />
             </Col>
           </Row>
         </Container>
       </section>
 
-      <Services />
-
-      <section className="trending_products mb-3">
+      <section className=" mb-3">
         <Container>
           <Row>
-            <Col lg="12" className="mb-3">
-              <h2 className="section_title">Trending Products</h2>
+            <Col
+              lg="12"
+              className="mb-3 border-b flex items-center justify-between"
+            >
+              <h2 className="text-2xl">
+                Faça o melhor negócio em{" "}
+                <span className="text-sky-500">Smartphones</span>
+              </h2>
+              <motion.button whileTap={{ scaleX: 1.1 }}>
+                <Link
+                  className="flex items-center gap-x-2 no-underline text-[#111]"
+                  href="#"
+                >
+                  Ver todos
+                  <BsArrowRight className="text-sky-500" />
+                </Link>
+              </motion.button>
             </Col>
-            <ProductsList data={trendingProducts} />
+            <ListProduct />
           </Row>
         </Container>
       </section>
 
-      <section className="sales_products mb-3">
+      <section className="mb-3">
         <Container>
           <Row>
-            <Col lg="12" className="mb-3">
-              <h2 className="section_title">Trending Products</h2>
+            <Col
+              lg="12"
+              className="mb-3 border-b flex items-center justify-between"
+            >
+              <h2 className="text-2xl">
+                Compre nas{" "}
+                <span className="text-sky-500">principais categorias</span>
+              </h2>
+              <motion.button whileTap={{ scaleX: 1.1 }}>
+                <Link
+                  className="flex items-center gap-x-2 no-underline text-[#111]"
+                  href="#"
+                >
+                  Ver todos
+                  <BsArrowRight className="text-sky-500" />
+                </Link>
+              </motion.button>
             </Col>
-            <ProductsList data={bestSales} />
+            <ListCategory />
+          </Row>
+        </Container>
+      </section>
+
+      {/* Brands Categories */}
+      <section className="mb-3">
+        <Container>
+          <Row>
+            <Col
+              lg="12"
+              className="mb-3 border-b flex items-center justify-between"
+            >
+              <h2 className="text-2xl">
+                Principais{" "}
+                <span className="text-sky-500">marcas de eletrônicos</span>
+              </h2>
+              <motion.button whileTap={{ scaleX: 1.1 }}>
+                <Link
+                  className="flex items-center gap-x-2 no-underline text-[#111]"
+                  href="#"
+                >
+                  Ver todos
+                  <BsArrowRight className="text-sky-500" />
+                </Link>
+              </motion.button>
+            </Col>
+            <Brands />
+          </Row>
+        </Container>
+      </section>
+
+      <section className=" mb-3">
+        <Container>
+          <Row>
+            <Col
+              lg="12"
+              className="mb-3 border-b flex items-center justify-between"
+            >
+              <h2 className="text-2xl">
+                Faça o melhor negócio em{" "}
+                <span className="text-sky-500">Smartphones</span>
+              </h2>
+              <motion.button whileTap={{ scaleX: 1.1 }}>
+                <Link
+                  className="flex items-center gap-x-2 no-underline text-[#111]"
+                  href="#"
+                >
+                  Ver todos
+                  <BsArrowRight className="text-sky-500" />
+                </Link>
+              </motion.button>
+            </Col>
+            <ListProduct />
           </Row>
         </Container>
       </section>
@@ -125,10 +158,10 @@ const Home = () => {
 
               <Button className="mt-10 bg-white">
                 <Link
-                  className="text-[#0a1d37] no-underline font-semibold"
+                  className="text-[#0a1d37] no-underline font-bold"
                   href="/products"
                 >
-                  SHOP NOW
+                  COMPRAR AGORA
                 </Link>
               </Button>
             </Col>
@@ -149,8 +182,7 @@ const Home = () => {
             <Col lg="12" className="mb-3">
               <h2 className="section_title">New Arrivals</h2>
             </Col>
-            <ProductsList data={mobileProducts} />
-            <ProductsList data={wirelessProducts} />
+            <ListProduct />
           </Row>
         </Container>
       </section>
@@ -161,12 +193,12 @@ const Home = () => {
             <Col lg="12" className="mb-3">
               <h2 className="section_title">New Arrivals</h2>
             </Col>
-            <ProductsList data={popularProducts} />
+            <ListProduct />
           </Row>
         </Container>
       </section>
     </>
-  );
+  )
 };
 
 export default Home;

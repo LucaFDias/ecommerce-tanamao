@@ -140,15 +140,17 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="12">
-            <div className="flex items-center justify-center gap-x-5 mb-3">
+          <Col
+            lg="12"
+            mg="3"
+            className="flex items-center justify-center gap-x-5 mb-3"
+          >
               <Image src={PixImg} alt="Pix" className="w-[50px]" />
               <Image src={MasterImg} alt="MasterCard" className="w-[50px]" />
               <Image src={HiperImg} alt="HiperCard" className="w-[50px]" />
               <Image src={VisaImg} alt="VisaCard" className="w-[50px]" />
               <Image src={EloImg} alt="EloCard" className="w-[50px]" />
               <Image src={BoletoImg} alt="BoletoCard" className="w-[50px] " />
-            </div>
           </Col>
         </Row>
       </Container>

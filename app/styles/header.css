@@ -1,0 +1,22 @@
+@media only screen and (max-width: 992px) {
+  .nav_mobile {
+    display: block;
+  }
+  .avatar_icons{
+    display: none;
+  }
+  .nav_item {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title_logo {
+    display: none;
+  }
+
+  .img_logo{
+    width: 48px;
+    height: 48px;
+  }
+}
