@@ -6,10 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/assets/images/logo.png";
 
-import {
-  AiOutlineHeart,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 
 import { 
   Container,
@@ -19,9 +16,10 @@ import { Badge } from "@mui/material";
 import Headroom from 'react-headroom';
 
 import Navbar from './Navbar';
-import InputSearch from '@/app/components/ui/Input/InputSearch';
-import AvatarMenu from '@/app/components/Avatar/AvatarMenu';
 import NavbarMobile from './NavbarMobile';
+import AvatarMenu from '@/app/components/Avatar/AvatarMenu';
+import CartSidebar from '@/app/components/Cart/CartSidebar';
+import InputSearch from '@/app/components/ui/Input/InputSearch';
 
 const Header = () => {
   return (
@@ -73,10 +71,7 @@ const Header = () => {
                   </button>
                   <button>
                     <Badge badgeContent={4} color="primary">
-                      <AiOutlineShoppingCart
-                        size={32}
-                        className="cursor-pointer"
-                      />
+                     <CartSidebar/>
                     </Badge>
                   </button>
                 </div>
