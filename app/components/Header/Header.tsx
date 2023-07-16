@@ -10,7 +10,7 @@ import {
   AiOutlineHeart,
   AiOutlineMenu,
   AiOutlineShoppingCart,
-} from "react-icons/ai"
+} from "react-icons/ai";
 import { User } from 'lucide-react';
 
 import { 
@@ -29,9 +29,9 @@ import {
 } from '@/components/ui/sheet';
 
 import AccordionList from './AccordionList';
-import InputSearch from '@/app/components/ui/Input/InputSearch';
-import AvatarMenu from '../Avatar/AvatarMenu';
 import Navbar from './Navbar';
+import InputSearch from '@/app/components/ui/Input/InputSearch';
+import AvatarMenu from '@/app/components/Avatar/AvatarMenu';
 
 const Header = () => {
   return (

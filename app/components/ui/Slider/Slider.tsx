@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -29,7 +29,6 @@ import productImg06 from "@/app/assets/banners/banner6.png"
 import productImg07 from "@/app/assets/banners/banner7.png"
 import productImg08 from "@/app/assets/banners/banner8.png"
 
-
 const Slider = () => {
 
   return (
@@ -39,6 +38,7 @@ const Slider = () => {
         modules={[Navigation, Pagination, A11y, Autoplay]}
         slidesPerView={1}
         centeredSlides
+        loop
         navigation
         autoplay
         pagination={{ clickable: true }}
