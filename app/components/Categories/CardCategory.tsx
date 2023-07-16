@@ -14,7 +14,7 @@ const CardCategory = () => {
         >
           <motion.div 
             whileHover={{ scale: 1.1 }}
-            className="h-[132px] w-[132px] bg-gray-100 border shadow rounded-full p-2">
+            className="h-[100px] w-[100px] bg-gray-100 border shadow rounded-2xl p-2">
             <Image
               src={ImageProduct01}
               alt="Imagem da categoria"

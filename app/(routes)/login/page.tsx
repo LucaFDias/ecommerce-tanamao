@@ -1,9 +1,16 @@
 import React from 'react'
+import AuthForm from './components/AuthForm'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <section
+      className='flex items-center justify-center'
+    >
+      <AuthForm
+
+      />
+    </section>
   )
 }
 
-export default Login
+export default Login;

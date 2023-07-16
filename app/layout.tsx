@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import Header from '@/app/components/Header/Header';
 import Footer from '@/app/components/Footer/Footer';
+import AuthContext from './context/AuthContext';
 
 
 const nunito = Nunito({ subsets: ['latin'] });
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={nunito.className}>
-        <Header/>
-        {children}
-        <Footer/>
+        <AuthContext>
+          <Header/>
+          {children}
+          <Footer/>
+        </AuthContext>
         </body>
     </html>
   )

@@ -11,5 +11,7 @@
 }
 
 @media only screen and (max-width: 576px) {
-
+  .img_product_card {
+    height: 150px;
+  }
 }

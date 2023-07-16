@@ -9,7 +9,7 @@ import ImageProduc01 from '@/app/assets/images/imagesProducts/phone-01.jpg';
 const CardProduct = () => {
   return (
     <section>
-      <div className="hover:shadow-lg hover:rounded-2xl">
+      <div className="hover:shadow-lg hover:rounded-2xl card_product">
         <Link className="text-black no-underline" href="/products/id">
           <div className="flex relative">
             <div className="absolute top-0 right-0 p-1 bg-sky-500 rounded-tr-2xl rounded-bl-2xl">
@@ -21,7 +21,7 @@ const CardProduct = () => {
             <Image
               src={ImageProduc01}
               alt="Imagem do produto"
-              className=" w-full h-[200px] object-contain"
+              className=" w-full h-[200px] object-contain img_product_card"
             />
           </div>
           <footer className="py-2 px-4 ">

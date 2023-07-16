@@ -34,7 +34,7 @@ const Slider = () => {
   return (
     <div className="z-[-10]">
       <Swiper
-        className="border-0"
+        className="border-0 h-full w-full"
         modules={[Navigation, Pagination, A11y, Autoplay]}
         slidesPerView={1}
         centeredSlides

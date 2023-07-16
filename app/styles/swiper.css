@@ -1,5 +1,7 @@
 .swiper-container {
   position: relative;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .swiper-button-next,

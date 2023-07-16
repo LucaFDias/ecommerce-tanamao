@@ -58,7 +58,9 @@ const Home = () => {
                 </Link>
               </motion.button>
             </Col>
-            <ListProduct />
+            <Col lg="12">
+              <ListProduct />
+            </Col>
           </Row>
         </Container>
       </section>
@@ -84,7 +86,9 @@ const Home = () => {
                 </Link>
               </motion.button>
             </Col>
-            <ListCategory />
+            <Col lg="12">
+              <ListCategory />
+            </Col>
           </Row>
         </Container>
       </section>
